@@ -1,0 +1,48 @@
+{
+  "name": "express-mvc-generator",
+  "description": "Express' mvc application generator",
+  "version": "0.0.1",
+  "author": "Raja Rama Mohan T <raja.thavalam@senecaglobal.com>",
+  "contributors": [
+  ],
+  "keywords": [
+    "express",
+    "framework",
+    "MVC Node.JS",
+    "Express.JS MVC",
+    "MVC EXpress JS",
+    "Express Simple MVC",
+    "Express Model View Controler",
+    "MVC Node",
+    "Node JS MVC"
+  ],
+  "repository": "rajathavalam/express-mvc-generator",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "2.7.1",
+    "mkdirp": "0.5.1",
+    "sorted-object": "0.0.1"
+  },
+  "main": "bin/express",
+  "preferGlobal": true,
+  "bin": {
+    "express": "./bin/express"
+  },
+  "devDependencies": {
+    "mocha": "2.2.5",
+    "rimraf": "~2.2.8",
+    "supertest": "1.0.1"
+  },
+  "engines": {
+    "node": ">= 0.10"
+  },
+  "files": [
+    "LICENSE",
+    "bin/",
+    "templates/"
+  ],
+  "scripts": {
+    "test": "mocha --reporter spec --bail --check-leaks test/",
+    "test-ci": "mocha --reporter spec --check-leaks test/"
+  }
+}
