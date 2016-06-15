@@ -89,9 +89,9 @@ function createApplication(app_name, path) {
     console.log('   run the app:');
 
     if (launchedFromCmd()) {
-      console.log('     %s SET DEBUG=%s:* & npm start', prompt, app_name);
+      console.log('     %s SET DEBUG=%s:* & node app or nodemon app ', prompt, app_name);
     } else {
-      console.log('     %s DEBUG=%s:* npm start', prompt, app_name);
+      console.log('     %s DEBUG=%s:* node app or nodemon app', prompt, app_name);
     }
 
     console.log();
@@ -108,7 +108,7 @@ function createApplication(app_name, path) {
   var passport = loadTemplate('js/data/passport.js');
   var model   = loadTemplate('js/data/model.js');
   var fournotfour   = loadTemplate('js/data/404.html');
-  
+  var home = loadTemplate('js/data/home.js'); 
   
   
   // CSS
@@ -121,6 +121,10 @@ function createApplication(app_name, path) {
   mkdir(path, function(){
     mkdir(path + '/public');
     mkdir(path + '/public/js');
+    write(path + '/public/js/script.js', routes);
+    
+    
+    
     mkdir(path + '/public/img');
     mkdir(path + '/public/css', function(){
       switch (program.css) {
@@ -190,7 +194,7 @@ function createApplication(app_name, path) {
     });
     
       mkdir(path + '/app/controllers', function(){
-       write(path + '/app/controllers/home.js', index);
+       write(path + '/app/controllers/home.js', home);
        complete();
         });
         
@@ -243,7 +247,7 @@ function createApplication(app_name, path) {
           'serve-favicon': '~2.3.0',
             "async": "latest",
             "basic-auth-connect": "latest",
-            "bcrypt-nodejs": "0.0.3",,
+            "bcrypt-nodejs": "0.0.3",
             "client-sessions": "latest",
             "connect": "latest",
             "connect-flash": "latest",
@@ -310,11 +314,13 @@ function createApplication(app_name, path) {
     // write files
     write(path + '/package.json', JSON.stringify(pkg, null, 2));
     write(path + '/app.js', app);
-    mkdir(path + '/bin', function(){
+    
+   /* mkdir(path + '/bin', function(){
       www = www.replace('{name}', app_name);
       write(path + '/bin/www', www, 0755);
       complete();
-    });
+    });*/
+    
 
     if (program.git) {
       write(path + '/.gitignore', fs.readFileSync(__dirname + '/../templates/js/gitignore', 'utf-8'));
