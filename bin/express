@@ -151,6 +151,8 @@ function createApplication(app_name, path) {
       write(path + '/config/constants.js', constants);
       write(path + '/config/database.js', database);
       write(path + '/config/passport.js', passport);
+      write(path + '/config/auth.js', passport);
+ 
       complete();
     });
 
@@ -163,6 +165,7 @@ function createApplication(app_name, path) {
           copy_template('ejs/index.ejs', path + '/app/views/index.ejs');  
           copy_template('ejs/index.ejs', path + '/app/views/index.ejs');
           copy_template('ejs/error.ejs', path + '/app/views/error.ejs');
+          write(path + '/app/views/404.ejs', fournotfour);
           break;
         case 'jade':
           copy_template('jade/index.jade', path + '/app/views/index.jade');
@@ -170,6 +173,7 @@ function createApplication(app_name, path) {
           copy_template('jade/error.jade', path + '/app/views/error.jade');
           copy_template('common/login.ejs', path + '/app/views/login.jade'); 
           copy_template('common/signup.ejs', path + '/app/views/signup.jade'); 
+          write(path + '/app/views/404.ejs', fournotfour);
           
           break;
         case 'hjs':
@@ -177,7 +181,7 @@ function createApplication(app_name, path) {
           copy_template('hogan/error.hjs', path + '/app/views/error.hjs');
           copy_template('common/login.ejs', path + '/app/views/login.hjs'); 
           copy_template('common/signup.ejs', path + '/app/views/signup.hjs'); 
-          
+          write(path + '/app/views/404.hjs', fournotfour);
           
           break;
         case 'hbs':
@@ -186,10 +190,11 @@ function createApplication(app_name, path) {
           copy_template('hbs/error.hbs', path + '/app/views/error.hbs');
           copy_template('common/login.ejs', path + '/app/views/login.hbs'); 
           copy_template('common/signup.ejs', path + '/app/views/signup.hbs'); 
+          write(path + '/app/views/404.hbs', fournotfour);
           break;
       }
 
-      write(path + '/app/views/404.html', fournotfour);
+     
       complete();
     });
     

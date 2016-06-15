@@ -99,6 +99,16 @@ Run The express-mvc-generator Application
 $ node app or nodemon app 
 ```
 
+```sh
+Demo URL's
+
+Signup : http://localhost:8042/signup
+Login :  http://localhost:8042/login
+
+```
+
+
+
 ## Command Line Options
 
 This generator can also be further configured with the following command line flags.

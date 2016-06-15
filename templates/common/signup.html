@@ -39,23 +39,48 @@
                         <div class="col-sm-6 col-sm-offset-3 form-box">
                         	<div class="form-top">
                         		<div class="form-top-left">
-                        			<h3>Login to our site</h3>
-                            		<p>Enter your username and password to log on:</p>
+                        			<h3>Signup to our site</h3>
+                            		<p>Enter your username , password to sign up on:</p>
                         		</div>
                         		<div class="form-top-right">
                         			<i class="fa fa-key"></i>
                         		</div>
                             </div>
                             <div class="form-bottom">
-			                    <form role="form" action="" method="post" class="login-form">
-			                    	<div class="form-group">
-			                    		<label class="sr-only" for="form-username">Username</label>
-			                        	<input type="text" name="form-username" placeholder="Username..." class="form-username form-control" id="form-username">
-			                        </div>
-			                        <div class="form-group">
-			                        	<label class="sr-only" for="form-password">Password</label>
-			                        	<input type="password" name="form-password" placeholder="Password..." class="form-password form-control" id="form-password">
-			                        </div>
+                                
+                                      <% if (error.length > 0) { %>
+		<div class="alert alert-danger"><%- error %></div>
+		<% } %>
+		
+		 <% if (success.length > 0) { %>
+		<div class="alert alert-success"><%- success %></div>
+		<% } %>
+		
+                                
+			
+                        <form role="form" action="/signup" role="form" method="post" method="post" class="login-form">
+                                                
+                                                
+                  <div class="form-group">
+	            <label for="username"  class="sr-only">Name</label>
+	            <input type="text" name="username" id="username" class="form-control form-username"  required  placeholder="Name"/>
+	           
+	        </div>
+   
+   
+   		  <div class="form-group" >
+				<label for="email"  class="sr-only">Email</label>
+				 <input type="email" name="email" id="email" class="form-control  form-username"  required placeholder="Email" />
+				
+			</div>
+   
+			<div class="form-group" >
+				<label for="password"  class="sr-only">Password</label> 
+				<input type="password" name="password" id="password" class="form-control  form-username" ng-model="user.password" required  placeholder="Password"/>
+			    
+			</div>
+			
+			
 			                        <button type="submit" class="btn">Sign in!</button>
 			                    </form>
 		                    </div>

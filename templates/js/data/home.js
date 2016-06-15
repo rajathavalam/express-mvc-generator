@@ -4,7 +4,7 @@ var dateFormat = require('dateformat');
 
 exports.loggedIn = function(req, res, next)
 {
-	if (req.session.user) {
+	if (req.session.user) { // req.session.passport._id
 
 		next();
 
@@ -20,7 +20,6 @@ exports.home = function(req, res) {
 	
 	
 	res.render('home.ejs', {
-		formdata : formdata,
 		error : req.flash("error"),
 		success: req.flash("success"),
 		session:req.session,
