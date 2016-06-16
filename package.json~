@@ -1,8 +1,8 @@
 {
   "name": "express-mvc-generator",
   "description": "Express' mvc application generator",
-  "version": "0.0.1",
-  "author": "Raja Rama Mohan T <raja.thavalam@senecaglobal.com>",
+  "version": "2.1.6",
+  "author": "Raja Rama Mohan Thavalam <raja.thavalam@senecaglobal.com>",
   "contributors": [
   ],
   "keywords": [
@@ -19,9 +19,9 @@
   "repository": "rajathavalam/express-mvc-generator",
   "license": "MIT",
   "dependencies": {
-    "commander": "2.7.1",
-    "mkdirp": "0.5.1",
-    "sorted-object": "0.0.1"
+    "commander": ">0.0.0",
+    "mkdirp": ">0.0.0",
+    "sorted-object": ">0.0.0"
   },
   "main": "bin/express",
   "preferGlobal": true,

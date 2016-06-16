@@ -1,7 +1,7 @@
 {
   "name": "express-mvc-generator",
   "description": "Express' mvc application generator",
-  "version": "2.0.0",
+  "version": "2.1.6",
   "author": "Raja Rama Mohan Thavalam <raja.thavalam@senecaglobal.com>",
   "contributors": [
   ],

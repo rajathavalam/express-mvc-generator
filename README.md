@@ -86,6 +86,71 @@ Install dependencies:
 $ npm install
 ```
 
+###File Structure
+
+```bash
+$ express myapp
+
+
+myapp
+|
+|
+|____app
+|      |____controllers
+|      |    |____home.js
+|      |
+|      |____models
+|      |     |___home.js
+|      |
+|      |____views
+|           |___404.ejs
+| 	    |___error.ejs
+|           |___index.ejs
+|           |___login.ejs
+|           |___signup.ejs
+|	
+|
+|_____config
+|     |___auth.js
+|     |___constants.js
+|     |___database.js
+|     |___passport.js
+|     |___routes.js
+|
+|
+|____lib
+|    |___email.js
+|
+|____node_modules
+|
+|
+|____public.js
+|    |____css
+|    |    |__style.css
+|    |    
+|    |____js
+|    |    |__script.js
+|    |
+|    |____img
+|    |    |__img.jpg
+|    |
+|    |
+|    |____uploads
+|         |__img.jpg
+|      
+|   
+|
+|_____app.js
+|
+|
+|
+|_____package.json
+
+ ```
+
+
+
+
 ###Important Settings
 1) Open your config/database.js , Please configure your mongo db.
 2) Open your config/constants.js , Please configure your constants(SMTP ....). 
@@ -117,6 +182,7 @@ This generator can also be further configured with the following command line fl
     -V, --version       output the version number
     -e, --ejs           add ejs engine support (defaults to jade)
         --hbs           add handlebars engine support
+        --jade          add jade engine support
     -H, --hogan         add hogan.js engine support
     -c, --css <engine>  add stylesheet <engine> support (less|stylus|compass|sass) (defaults to plain css)
         --git           add .gitignore
@@ -150,6 +216,10 @@ This generator can also be further configured with the following command line fl
 
 
 
+## Help/Assistance
+
+Email Us : rajaram.tavalam@gmail.com                   
+Contact US :  +91-7386249801
 
 
 ## License
