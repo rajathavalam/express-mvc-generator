@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Express-mvc-generator by rajathavalam</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Express-mvc-generator</h1>
+      <h2 class="project-tagline"></h2>
+      <a href="https://github.com/rajathavalam/express-mvc-generator" class="btn">View on GitHub</a>
+      <a href="https://github.com/rajathavalam/express-mvc-generator/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/rajathavalam/express-mvc-generator/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <p><a href="https://www.npmjs.com/package/express-mvc-generator/"><img src="https://i.cloudup.com/zfY6lL7eFa-3000x3000.png" alt="Express Logo"></a></p>
+
+<p><a href="https://www.npmjs.com/package/express-mvc-generator">Express'</a> Model View Controller Application Generator.</p>
+
+<p><a href="https://npmjs.org/package/express-mvc-generator"><img src="https://img.shields.io/npm/v/express-mvc-generator.svg" alt="NPM Version"></a>
+<a href="https://npmjs.org/package/express-mvc-generator"><img src="https://img.shields.io/npm/dm/express-mvc-generator.svg" alt="NPM Downloads"></a></p>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
+
+<div class="highlight highlight-source-shell"><pre>$ npm install express-mvc-generator -g </pre></div>
+
+<h2>
+<a id="display-the-command-options-with-the--h-option" class="anchor" href="#display-the-command-options-with-the--h-option" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Display the command options with the -h option:</h2>
+
+<div class="highlight highlight-source-shell"><pre> express -h
+
+  Usage: express [options] [dir]
+
+  Options:
+
+    -h, --help          output usage information
+    -V, --version       output the version number
+    -e, --ejs           add ejs engine support (defaults to EJS)
+        --hbs           add handlebars engine support
+    -H, --hogan         add hogan.js engine support
+    -c, --css <span class="pl-k">&lt;</span>engine<span class="pl-k">&gt;</span>  add stylesheet <span class="pl-k">&lt;</span>engine<span class="pl-k">&gt;</span> support (less<span class="pl-k">|</span>stylus<span class="pl-k">|</span>compass<span class="pl-k">|</span>sass) (defaults to plain css)
+        --git           add .gitignore
+    -f, --force         force on non-empty directory
+</pre></div>
+
+<h4>
+<a id="for-example-the-following-creates-an-express-app-named-myapp-in-the-current-working-directory" class="anchor" href="#for-example-the-following-creates-an-express-app-named-myapp-in-the-current-working-directory" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>For example, the following creates an Express app named myapp in the current working directory:</h4>
+
+<p>express myapp:</p>
+
+<div class="highlight highlight-source-shell"><pre>$ express myapp
+
+
+   create <span class="pl-c1">:</span> myapp
+   create <span class="pl-c1">:</span> myapp/public/js/script.js
+   create <span class="pl-c1">:</span> myapp/package.json
+   create <span class="pl-c1">:</span> myapp/app.js
+   create <span class="pl-c1">:</span> myapp/public
+   create <span class="pl-c1">:</span> myapp/public/js
+   create <span class="pl-c1">:</span> myapp/public/img
+   create <span class="pl-c1">:</span> myapp/public/css
+   create <span class="pl-c1">:</span> myapp/public/css/style.css
+   create <span class="pl-c1">:</span> myapp/config
+   create <span class="pl-c1">:</span> myapp/config/routes.js
+   create <span class="pl-c1">:</span> myapp/config/constants.js
+   create <span class="pl-c1">:</span> myapp/config/database.js
+   create <span class="pl-c1">:</span> myapp/config/passport.js
+   create <span class="pl-c1">:</span> myapp/app/views
+   create <span class="pl-c1">:</span> myapp/app/views/login.ejs
+   create <span class="pl-c1">:</span> myapp/app/views/signup.ejs
+   create <span class="pl-c1">:</span> myapp/app/views/index.ejs
+   create <span class="pl-c1">:</span> myapp/app/views/index.ejs
+   create <span class="pl-c1">:</span> myapp/app/views/error.ejs
+   create <span class="pl-c1">:</span> myapp/app/views/404.html
+   create <span class="pl-c1">:</span> myapp/app/controllers
+   create <span class="pl-c1">:</span> myapp/app/controllers/home.js
+
+   install dependencies:
+     $ <span class="pl-c1">cd</span> myapp <span class="pl-k">&amp;&amp;</span> npm install
+
+   run the app:
+     $ DEBUG=myapp:<span class="pl-k">*</span> node app or nodemon app 
+
+   create <span class="pl-c1">:</span> myapp/app/models
+   create <span class="pl-c1">:</span> myapp/app/models/home.js
+   create <span class="pl-c1">:</span> myapp/lib
+   create <span class="pl-c1">:</span> myapp/lib/email.js
+</pre></div>
+
+<p>Install dependencies:</p>
+
+<div class="highlight highlight-source-shell"><pre>$ npm install</pre></div>
+
+<h3>
+<a id="file-structure" class="anchor" href="#file-structure" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>File Structure</h3>
+
+<div class="highlight highlight-source-shell"><pre>$ express myapp
+
+
+myapp
+<span class="pl-k">|</span>
+<span class="pl-k">|</span>
+<span class="pl-k">|</span>____app
+<span class="pl-k">|</span>      <span class="pl-k">|</span>____controllers
+<span class="pl-k">|</span>      <span class="pl-k">|</span>    <span class="pl-k">|</span>____home.js
+<span class="pl-k">|</span>      <span class="pl-k">|</span>
+<span class="pl-k">|</span>      <span class="pl-k">|</span>____models
+<span class="pl-k">|</span>      <span class="pl-k">|</span>     <span class="pl-k">|</span>___home.js
+<span class="pl-k">|</span>      <span class="pl-k">|</span>
+<span class="pl-k">|</span>      <span class="pl-k">|</span>____views
+<span class="pl-k">|</span>           <span class="pl-k">|</span>___404.ejs
+<span class="pl-k">|</span>       <span class="pl-k">|</span>___error.ejs
+<span class="pl-k">|</span>           <span class="pl-k">|</span>___index.ejs
+<span class="pl-k">|</span>           <span class="pl-k">|</span>___login.ejs
+<span class="pl-k">|</span>           <span class="pl-k">|</span>___signup.ejs
+<span class="pl-k">|</span>   
+<span class="pl-k">|</span>
+<span class="pl-k">|</span>_____config
+<span class="pl-k">|</span>     <span class="pl-k">|</span>___auth.js
+<span class="pl-k">|</span>     <span class="pl-k">|</span>___constants.js
+<span class="pl-k">|</span>     <span class="pl-k">|</span>___database.js
+<span class="pl-k">|</span>     <span class="pl-k">|</span>___passport.js
+<span class="pl-k">|</span>     <span class="pl-k">|</span>___routes.js
+<span class="pl-k">|</span>
+<span class="pl-k">|</span>
+<span class="pl-k">|</span>____lib
+<span class="pl-k">|</span>    <span class="pl-k">|</span>___email.js
+<span class="pl-k">|</span>
+<span class="pl-k">|</span>____node_modules
+<span class="pl-k">|</span>
+<span class="pl-k">|</span>
+<span class="pl-k">|</span>____public.js
+<span class="pl-k">|</span>    <span class="pl-k">|</span>____css
+<span class="pl-k">|</span>    <span class="pl-k">|</span>    <span class="pl-k">|</span>__style.css
+<span class="pl-k">|</span>    <span class="pl-k">|</span>    
+<span class="pl-k">|</span>    <span class="pl-k">|</span>____js
+<span class="pl-k">|</span>    <span class="pl-k">|</span>    <span class="pl-k">|</span>__script.js
+<span class="pl-k">|</span>    <span class="pl-k">|</span>
+<span class="pl-k">|</span>    <span class="pl-k">|</span>____img
+<span class="pl-k">|</span>    <span class="pl-k">|</span>    <span class="pl-k">|</span>__img.jpg
+<span class="pl-k">|</span>    <span class="pl-k">|</span>
+<span class="pl-k">|</span>    <span class="pl-k">|</span>
+<span class="pl-k">|</span>    <span class="pl-k">|</span>____uploads
+<span class="pl-k">|</span>         <span class="pl-k">|</span>__img.jpg
+<span class="pl-k">|</span>      
+<span class="pl-k">|</span>   
+<span class="pl-k">|</span>
+<span class="pl-k">|</span>_____app.js
+<span class="pl-k">|</span>
+<span class="pl-k">|</span>
+<span class="pl-k">|</span>
+<span class="pl-k">|</span>_____package.json
+</pre></div>
+
+<h3>
+<a id="important-settings" class="anchor" href="#important-settings" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Important Settings</h3>
+
+<p>1) Open your config/database.js , Please configure your mongo db.
+2) Open your config/constants.js , Please configure your constants(SMTP ....). 
+3) Do you want use SMTP ,Please uncomment passport.js line 95  to 98</p>
+
+<p>Run The express-mvc-generator Application</p>
+
+<div class="highlight highlight-source-shell"><pre>$ node app or nodemon app </pre></div>
+
+<div class="highlight highlight-source-shell"><pre>Demo URL<span class="pl-s"><span class="pl-pds">'</span>s</span>
+<span class="pl-s"></span>
+<span class="pl-s">Signup : http://localhost:8042/signup</span>
+<span class="pl-s">Login :  http://localhost:8042/login</span>
+<span class="pl-s"></span></pre></div>
+
+<h2>
+<a id="command-line-options" class="anchor" href="#command-line-options" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Command Line Options</h2>
+
+<p>This generator can also be further configured with the following command line flags.</p>
+
+<pre><code>-h, --help          output usage information
+-V, --version       output the version number
+-e, --ejs           add ejs engine support (defaults to jade)
+    --hbs           add handlebars engine support
+    --jade          add jade engine support
+-H, --hogan         add hogan.js engine support
+-c, --css &lt;engine&gt;  add stylesheet &lt;engine&gt; support (less|stylus|compass|sass) (defaults to plain css)
+    --git           add .gitignore
+-f, --force         force on non-empty directory
+</code></pre>
+
+<h2>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Features</h2>
+
+<ul>
+<li>Very Good  file structure MVC style Express. </li>
+<li>Already We Given Examples of Controller and Model(Mongoose) , Passport  and Config Settings</li>
+<li>Pre Installed Important and Most Used NPM Packages , and used Example </li>
+<li>We Given Simple And Well understanding Express MVC Example</li>
+<li>We already included most used and important npm modules like as pm2 ,async, body-parse, sessions, flash, cookie, dateformat, mongoose, nodemailer , nodemon, passport</li>
+<li>Support View engines:
+
+<ul>
+<li>Jade</li>
+<li>Handlebars</li>
+<li>Swig</li>
+<li>EJS</li>
+<li>Marko</li>
+<li>Nunjucks</li>
+</ul>
+</li>
+<li>Supported CSS pre-processors
+
+<ul>
+<li>SASS (both node-sass and ruby sass)</li>
+<li>LESS</li>
+<li>Stylus</li>
+</ul>
+</li>
+<li>Supported Databases (with MVC structure):
+
+<ul>
+<li>MongoDB</li>
+<li>MySQL</li>
+<li>PostgreSQL</li>
+<li>RethinkDB</li>
+<li>SQLite</li>
+</ul>
+</li>
+</ul>
+
+<h2>
+<a id="helpassistance" class="anchor" href="#helpassistance" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Help/Assistance</h2>
+
+<p>Email Us : <a href="mailto:rajaram.tavalam@gmail.com">rajaram.tavalam@gmail.com</a><br>
+Contact US :  +91-7386249801</p>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
+
+<p><a href="LICENSE">MIT</a></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/rajathavalam/express-mvc-generator">Express-mvc-generator</a> is maintained by <a href="https://github.com/rajathavalam">rajathavalam</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
