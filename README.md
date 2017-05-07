@@ -218,8 +218,7 @@ This generator can also be further configured with the following command line fl
 
 ## Help/Assistance
 
-Email Us : rajaram.tavalam@gmail.com                   
-Contact US :  +91-7386249801
+Email Us : rajaram.tavalam@gmail.com          
 
 
 ## License
