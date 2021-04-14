@@ -1,3 +1,14 @@
+
+---
+---
+
+### This project's version is no longer actively supported and not recommended for use. It is made available as read-only. 
+### Please check the official website for express application generator https://expressjs.com/en/starter/generator.html
+
+---
+---
+
+
 [![Express Logo](https://i.cloudup.com/zfY6lL7eFa-3000x3000.png)](https://www.npmjs.com/package/express-mvc-generator/)
 
 [Express'](https://www.npmjs.com/package/express-mvc-generator) Model View Controller Application Generator.
